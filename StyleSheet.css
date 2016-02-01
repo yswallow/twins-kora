@@ -1,0 +1,28 @@
+body {
+  background-color: #FFFAFA; 
+}
+
+*.center {
+  text-align: center;
+}
+
+th {
+	background-color: #99CC33;
+	border: solid 1px #000000;
+}
+
+table {
+	border-collapse: collapse;
+	border: solid 1px #ffffff;
+}
+
+td {
+  background-color: #dddddd;
+  border: solid 1px #000000;
+}
+
+
+
+* {
+  padding: 4px 12px;
+}

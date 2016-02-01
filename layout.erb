@@ -1,0 +1,34 @@
+<html>
+<head>
+  <link rel="shortcut icon" href="./favicon.ico">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
+  <title>単位修得状況照会 [CampusSquare]</title>
+  <link rel="stylesheet" href="./StyleSheet.css" type="text/css">
+</head>
+
+<body>
+
+<table>
+<tbody>
+<tr>
+<% %w|No. 科目区分 科目番号 科目名 単位数 年度 評語 合否|.each do |name| %>
+  <th class="seiseki-head"><%= name %></th>
+<% end %>
+</tr>
+
+<% subjects.each_with_index do |subject,i| %>
+<tr class="content">
+<td class="center"><%= i+1 %></td>
+<% [:科目区分, :科目番号, :科目名, :単位数, :年度, :評語, :合否].each do |key| %>
+<td<%= key == :科目名 ? nil : ' class="center"'%>><%= subject[key] %></td>
+<% end %>
+</tr>
+<% end %>
+</tbody>
+</table>
+
+</body>
+</html>
